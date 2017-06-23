@@ -1,0 +1,19 @@
+﻿@model WebApplication.Models.Pessoa
+@{
+    ViewBag.Title = "Consulta com Entity";
+}
+
+<br />
+@Html.DisplayNameFor(model => model.Nome): 
+@Html.DisplayName(Model.Nome)
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">Telefone</div>
+        @foreach (var item in Model.Telefones)
+        {
+        <div class="col-md-12">@Html.DisplayFor(modelItem => item.Contato)</div>
+        }
+    </div>
+</div>
